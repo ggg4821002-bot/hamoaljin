@@ -1,3 +1,5 @@
+[file name]: XeonTele9.js
+[file content begin]
 process.on('uncaughtException', console.error);
 require("./settings");
 const {
@@ -545,9 +547,9 @@ module.exports = XeonBotInc = async (XeonBotInc, bot) => {
                 const userStatus = isUserPremium(userId) ? "🌟 مستخدم مميز" : "👤 مستخدم عادي";
                 const premiumCount = premiumUsers.length;
 
-    // الصورة المخصصة أعلى القائمة
-    const menuImage = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663557895138/WupSXVWHesHIGDEA.jpg';
-    
+                // ⭐ الصورة المخصصة فوق معلومات النظام
+                const menuImage = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663557895138/WupSXVWHesHIGDEA.jpg';
+
                 const menuText = `╔═══ ✦ ━━━━━━━━━ ═══╗
         🏴‍☠️ 𝑯𝒂𝒎𝒐     𝒂𝒍𝒋𝒊𝒏  🏴‍☠️
 ╚═══ ✦ ━━━━━━━━━ ═══╝
@@ -577,7 +579,7 @@ module.exports = XeonBotInc = async (XeonBotInc, bot) => {
 ╚════━━━━✦━━━━━════╝`;
 
                 try {
-                    await XeonBotInc.replyWithPhoto(global.pp || 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663557895138/WupSXVWHesHIGDEA.jpg', {
+                    await XeonBotInc.replyWithPhoto(menuImage, {
                         caption: menuText,
                         parse_mode: 'HTML',
                         reply_markup: {
@@ -588,7 +590,7 @@ module.exports = XeonBotInc = async (XeonBotInc, bot) => {
                                 }],
                                 [{
                                     text: "👤 المطور",
-                                    url: "@Medo_Official_11"
+                                    url: "https://t.me/Medo_Official_11"
                                 }]
                             ]
                         }
@@ -656,3 +658,4 @@ fs.watchFile(file, () => {
     delete require.cache[file];
     require(file);
 });
+[file content end]
